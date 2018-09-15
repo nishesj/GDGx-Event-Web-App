@@ -2,18 +2,21 @@
     <div class="row p-2">
         <div class="col-md-8 offset-md-2 pt-2 pb-2">
             <br>
-            <h3 class="animated fadeInUp" style="font-family: google-sans;color: #1a73e8;">Our lineup of big thinkers and even bigger doers</h3>
+            <h3 class="animated fadeInUp" style="font-family: google-sans;color: #1a73e8;">Our lineup of big thinkers
+                and even bigger doers</h3>
             <br>
-            <p class="animated fadeInUp" style="font-family: google-sans">Hear from the speakers who shape the future of Android, Web and Cloud technologies. Check back often as we add more speakers all the time.</p>
+            <p class="animated fadeInUp" style="font-family: google-sans">Hear from the speakers who shape the future of
+                Android, Web and Cloud technologies. Check back often as we add more speakers all the time.</p>
 
-           <br>
+            <br>
         </div>
     </div>
-   
+
 </div>
 
 
-<div class="container-fluid" style="background-image: url('../assets/img/a.svg');background-repeat: no-repeat;background-size: cover;">
+<div class="container-fluid"
+     style="background-image: url('../assets/img/a.svg');background-repeat: no-repeat;background-size: cover;">
     <div class="row mt-2 mb-5">
         <div class="container-fluid">
             <div class="row">
@@ -21,7 +24,9 @@
                     <div class="container-fluid">
                         <div class="row animated fadeInUp">
                             <div class="col-md-3 col-6 text-center mt-4" ng-repeat="sp in speakersData">
-                                <img src="{{sp.profileImg}}" alt="Speaker Image" class="rounded-circle" width="60%">
+                                <img src="{{sp.profileImg}}" data-toggle="modal" data-target="#speakerModal"
+                                     ng-click="onSpeakerSelect(sp)" alt="Speaker Image" class="rounded-circle"
+                                     width="60%">
                                 <br><br>
                                 <h5 class="h5-responsive" style="font-family: google-sans;">{{sp.name}}</h5>
                                 <p>{{sp.company}}</p>
@@ -38,11 +43,44 @@
             <h3 style="font-family: google-sans;color: #1a73e8;" class="mb-3">{{patData.title}}</h3>
             <p>{{patData.description}}</p>
             <br>
-            <div ng-repeat="pd in patData.patnersName">
-                <a href="{{pd.URL}}" class="mb-5"><img src="{{pd.PatnerImg}}" width="{{pd.width}}" title="{{pd.name}}"></a>
+            <ul class="list-inline">
+                <li ng-repeat="pd in patData.patnersName" class="list-inline-item">
+                    <a href="{{pd.URL}}" class="mb-5"><img src="{{pd.PatnerImg}}" width="{{pd.width}}"
+                                                           title="{{pd.name}}"></a>
+                </li>
+            </ul>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="speakerModal" tabindex="-1" role="dialog" aria-labelledby="speakerModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">About {{selectedSpeaker.name}}</h5>
+                <button type="button" class="close" data-dismiss="modal" ng-click="selectedSpeaker = null" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-            <br>
-            <br>
+            <div class="modal-body">
+                <div class="row-fluid">
+                    <div class="span10 offset1 text-center">
+                        <img src="{{selectedSpeaker.profileImg}}" name="aboutme" width="140" height="140" border="0"
+                             class="rounded-circle">
+                        <h3 class="media-heading">{{selectedSpeaker.name}}
+                        </h3>
+                        <hr>
+                        <p class="text-left"><strong>Bio: </strong><br>
+                        {{selectedSpeaker.bio}}
+                        </p>
+                        <br>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

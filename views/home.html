@@ -3,7 +3,7 @@
     <div class="row p-0">
         <div class="col-md-10 offset-md-1" >
             <div class="container-fluid">
-                <div class="row mt-5 mb-5 align-items-center" > 
+                <div class="row mt-5 mb-5 align-items-center" >
                     <div class="col-md-6" style="padding-top: auto; padding-bottom: auto" >
                         <h1 style="font-family: google-sans;font-weight: 350;color: #3c4043;" class="display-5 animated fadeInUp"><b>Build for <span style="color: #1a73e8;">Digital Wellbeing</span>.</b></h1>
                         <br>
@@ -16,7 +16,7 @@
                             <span ng-repeat="hs in homeJson.hashTag">
                                 {{hs.name}} &nbsp;
                             </span>
-                            
+
                         </p>
 
                         <!-- <h5 class="google-font animated fadeInU">Coming Soon...</h5> -->
@@ -32,7 +32,7 @@
                         &nbsp;
 
                         <a href="{{homeJson.eventMeetupLink}}" target="_blank" class="btn btn-pink btn-sm mt-2 m-0 waves-effect waves-light z-depth-0 animated fadeInUp google-font" style="text-transform:capitalize;">Meetup Page</a>
-                        
+
                     </div>
 
                     <div class="col-md-6 d-none d-lg-block">
@@ -46,7 +46,7 @@
 
             </div>
         </div>
-       
+
     </div>
 </div>
 
@@ -55,7 +55,7 @@
         <div class="row">
             <div class="col-md-10 offset-md-1 pt-5 pb-5">
                 <div class="container-fluid">
-                    <div class="row"> 
+                    <div class="row">
                         <div class="col-md-3 text-center p-5 animated fadeInUp" ng-repeat="svs in homeJson.overviewSection">
                             <i class="fa {{svs.icon}} fa-3x " style="color: #424242 ;text-align: center" aria-hidden="true"></i>
                             <br><br>
@@ -84,13 +84,13 @@
                         <div class="col-md-6 order-md-2 order-0 pb-4">
                             <div class="container-fluid">
                                 <div class="row">
-                                    
+
                                     <div class="col-md-6 col-6" ng-repeat="statis in homeJson.states.statistics">
                                         <h1 style="font-family: google-sans;font-weight: 800;font-size: 300%" class="display-5 animated fadeInUp"><b><span style="color: #1a73e8;">{{statis.quantity}}</span></b></h1>
-                                        
+
                                         <p class="google-font">{{statis.title}}</p>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
         </div>
     </div>
 
-    
+
 
     <div class="container-fluid pt-5 pb-3" style="background-image: url('../assets/img/a.svg');background-repeat: no-repeat;background-size: cover;">
         <div class="row">
@@ -125,7 +125,7 @@
             </div>
         </div>
 
-        
+
         <div class="row mt-5">
             <div class="col-md-6 offset-md-3 text-center mt-5">
                 <h3 style="font-family: google-sans;color: #1a73e8;" class="mb-3">{{homeJson.sessionsSection.title}}</h3>
@@ -134,7 +134,7 @@
             </div>
         </div>
 
-        <div class="row mt-2" > 
+        <div class="row mt-2" >
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-10 offset-md-1">
@@ -153,7 +153,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
 
 
@@ -162,9 +162,12 @@
                 <h3 style="font-family: google-sans;color: #1a73e8;" class="mb-3">{{patData.title}}</h3>
                 <p>{{patData.description}}</p>
                 <br>
-                <div ng-repeat="pd in patData.patnersName">
-                    <a href="{{pd.URL}}" class="mb-5"><img src="{{pd.PatnerImg}}" width="{{pd.width}}" title="{{pd.name}}"></a>
-                </div>
+                <ul class="list-inline">
+                    <li ng-repeat="pd in patData.patnersName" class="list-inline-item">
+                        <a href="{{pd.URL}}" class="mb-5"><img src="{{pd.PatnerImg}}" width="{{pd.width}}"
+                                                               title="{{pd.name}}"></a>
+                    </li>
+                </ul>
                 <br>
                 <br>
             </div>

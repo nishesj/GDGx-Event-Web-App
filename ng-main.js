@@ -29,14 +29,23 @@ var app = angular.module('gdgapp',['ngRoute','ngAnimate']).
                             controller:"homeCtrl"
                         })
                 });
-            
+
 
 app.controller('speakersCtrl',function($scope,$http){
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 
+
+    $scope.selectedSpeaker = null;
+
+
+    $scope.onSpeakerSelect = function(user) {
+        $scope.selectedSpeaker = user;
+    };
+
+
     var spd = $http.get('data/speakers.json');
-   
+
     fetch('data/speakers.json')
     .then(res=>res.json())
     .then(data => {
@@ -65,7 +74,7 @@ app.controller('sessionsCtrl',function($scope, $http){
     .then(data => {
         $scope.patData = data;
     })
-    
+
     $scope.varSessions = true;
     $scope.varSchedule = false;
 
@@ -143,7 +152,7 @@ app.controller('regCtrl',function($scope,$http){
     document.getElementById('confirmation').style.display = "none";
     document.getElementById('updateData').style.display = "none";
     document.getElementById('loginStatus').style.display = "block";
-    
+
     //Google Sign In Provider
     var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -154,7 +163,7 @@ app.controller('regCtrl',function($scope,$http){
         firebase.auth().signInWithPopup(provider).then(function(result) {
             var token = result.credential.accessToken;
             var user = result.user;
-            console.log(user);     
+            console.log(user);
         }).catch(function(error) {
             var errorCode = error.code;
             var errorMessage = error.message;
@@ -248,7 +257,7 @@ app.controller('regCtrl',function($scope,$http){
             uid = user.uid;
             var providerData = user.providerData;
 
- 
+
             $scope.userEmail = email;
 
             document.getElementById('postLogin').style.display = "block";
@@ -259,7 +268,7 @@ app.controller('regCtrl',function($scope,$http){
 
                 <a id="logout" style="color:blue"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out as a ${displayName}</a>
             `;
-            
+
 
             document.getElementById('logout').addEventListener('click',logoutUser);
 
@@ -277,8 +286,8 @@ app.controller('regCtrl',function($scope,$http){
                 // An error happened.
                 });
             }
-                            
-    
+
+
             firebase.database().ref('data/'+uid).once('value',(snap)=>{
                 if(snap.val()){
                     document.getElementById('UserDetails').style.display="none";
@@ -288,7 +297,7 @@ app.controller('regCtrl',function($scope,$http){
                     document.getElementById('UserDetails').style.display="block";
                 }
             })
-          
+
         } else {
             document.getElementById('loginStatus').style.display = "block";
         }
@@ -308,7 +317,7 @@ app.controller('attendingCtrl',function($scope,$http){
         $scope.regJson = data;
     })
 
- 
+
 })
 
 app.controller('ctrlSchedule',function($scope,$http){

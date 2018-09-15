@@ -1,37 +1,45 @@
 [
     {
-        "name":"Speaker Name",
+        "name":"Ernest Kamara",
         "company":"Company Name",
-        "profileImg":"assets/img/speakers/avatar.png"
+        "profileImg":"assets/img/speakers/avatar.png",
+        "bio": "Ernest Kamara is a Senior Software Engineer at XXX, working to improve  outcomes through connected XXX. She previously built XXX, XXX2, and XXX3 (first at Crashylytics, then Twitter, then Google!) She is an accomplished mobile/mobile tools developer with experience in building not only iOS and Android apps but also Android Studio Plugins, Android SDKs, Gradle plugins, and CI/CD systems like XXX."
     },
     {
         "name":"Speaker Name",
         "company":"Company Name",
-        "profileImg":"assets/img/speakers/avatar.png"
+        "profileImg":"assets/img/speakers/avatar.png",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sem dui, tempor sit amet commodo a, vulputate vel tellus."
     },
     {
         "name":"Speaker Name",
         "company":"Company Name",
-        "profileImg":"assets/img/speakers/avatar.png"
+        "profileImg":"assets/img/speakers/avatar.png",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sem dui, tempor sit amet commodo a, vulputate vel tellus."
     },
       {
         "name":"Speaker Name",
         "company":"Company Name",
-        "profileImg":"assets/img/speakers/avatar.png"
+        "profileImg":"assets/img/speakers/avatar.png",
+          "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sem dui, tempor sit amet commodo a, vulputate vel tellus."
+      },
+    {
+        "name":"Speaker Name",
+        "company":"Company Name",
+        "profileImg":"assets/img/speakers/avatar.png",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sem dui, tempor sit amet commodo a, vulputate vel tellus."
+
     },
     {
         "name":"Speaker Name",
         "company":"Company Name",
-        "profileImg":"assets/img/speakers/avatar.png"
+        "profileImg":"assets/img/speakers/avatar.png",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sem dui, tempor sit amet commodo a, vulputate vel tellus."
     },
     {
         "name":"Speaker Name",
         "company":"Company Name",
-        "profileImg":"assets/img/speakers/avatar.png"
-    },
-    {
-        "name":"Speaker Name",
-        "company":"Company Name",
-        "profileImg":"assets/img/speakers/avatar.png"
+        "profileImg":"assets/img/speakers/avatar.png",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sem dui, tempor sit amet commodo a, vulputate vel tellus."
     }
 ]
