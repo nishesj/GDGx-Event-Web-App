@@ -30,7 +30,7 @@
     <link rel="icon" href="icon/android-icon-36x36.png">
 
     <link rel="manifest" href="manifest.json">
-    
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84991751-1"></script>
     <script>
@@ -46,7 +46,7 @@
         console.log("Developer: Kishan Patel, Yash Pathak & Vrijraj Singh");
     </script>
 
-            
+
     <!-- register service worker -->
     <script>
         if ('serviceWorker' in navigator) {
@@ -65,7 +65,7 @@
 
             <a class="navbar-brand google-font" style="color: #616161" href="/"><b>GDG DevFest'18</b></a>
 
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">      
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <ul class="navbar-nav mr-auto mt-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home</a>
@@ -84,8 +84,8 @@
                     <li class="nav-item">
                         <a class="nav-link google-font primary-color" style="color: white" href="/registration"><i class="fa fa-bell-o" aria-hidden="true"></i>  Request for an Invitation &nbsp;</a>
                     </li>
-                </ul> 
-        
+                </ul>
+
             </div>
         </div>
     </nav>
@@ -120,11 +120,11 @@
            </div>
        </div>
     </nav>
-   
- 
+
+
 
     <br><br>
-    
+
     <ng-view class="view-frame">
         <div style="height: 100vh">
             <div class="flex-center flex-column">
@@ -137,13 +137,13 @@
             </div>
         </div>
     </ng-view>
-    
-    <div class="container-fluid mb-4 d-none d-sm-none d-md-none d-lg-block footer-animation" style="border-color:#e0e0e0;border-width: 1px;border-style: solid;border-bottom: 0" ng-controller="footerCtrl">
+
+    <div class="container-fluid mb-4 pb-5 d-lg-block footer-animation" style="border-color:#e0e0e0;border-width: 1px;border-style: solid;border-bottom: 0" ng-controller="footerCtrl">
         <div class="row ">
             <div class="col-md-10 offset-md-1 ">
                 <p style="font-family: google-sans;">
                     <br>
-                    <b>Follow Us</b> 
+                    <b>Follow Us</b>
                     &nbsp;&nbsp;
                     <a href="{{footerData.chapterSocialMediaLinks.googlePlus}}" target="_blank">
                     <i class="fa fa-google-plus fa-x" aria-hidden="true" style="color:#2E2E2E;"></i>
@@ -178,23 +178,23 @@
                     </a>
                 </p>
                 <hr>
-               
+
             </div>
         </div>
         <div class="row">
             <div class="col-md-2 mt-3 offset-md-1">
-                <p style="font-family: google-sans;font-size: 115%;font-weight: 300;"><b>About</b></p>         
+                <p style="font-family: google-sans;font-size: 115%;font-weight: 300;"><b>About</b></p>
                 <div ng-repeat="fdas in footerData.aboutSection">
                     <a href="{{fdas.link}}" style="color: #3E4551;font-family: google-sans;">{{fdas.linkName}}</a>
                     <br>
-                </div>      
+                </div>
             </div>
             <div class="col-md-2 mt-3">
                 <p style="font-family: google-sans;font-size: 115%;font-weight: 300;"><b>Event Resources</b></p>
                 <div ng-repeat="fdas1 in footerData.eventResourcesSection">
                     <a href="{{fdas1.link}}" style="color: #3E4551;font-family: google-sans;">{{fdas1.linkName}}</a>
                     <br>
-                </div>  
+                </div>
             </div>
 
             <div class="col-md-2 mt-3">
@@ -202,12 +202,12 @@
                 <div ng-repeat="fdas2 in footerData.DevConsole">
                     <a href="{{fdas2.link}}" style="color: #3E4551;font-family: google-sans;">{{fdas2.linkName}}</a>
                     <br>
-                </div> 
+                </div>
             </div>
 
         </div>
         <div class="row">
-            <div class="col-md-10 offset-md-1">
+            <div class="col-md-10 offset-md-1 d-none d-sm-none d-md-none d-lg-block">
                 <hr>
                 <br>
                 <ul class="list-inline">
@@ -252,7 +252,7 @@
       firebase.initializeApp(config);
     </script>
 
-    
+
 </body>
 
 </html>
