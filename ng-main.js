@@ -14,7 +14,7 @@ var app = angular.module('gdgapp',['ngRoute','ngAnimate']).
                             templateUrl:"views/speakers.html",
                             controller:"speakersCtrl"
                         })
-                        .when('/sessions',{
+                        .when('/sessions/:session?',{
                             templateUrl:"views/sessions.html",
                             controller:"sessionsCtrl"
                         })
@@ -320,16 +320,23 @@ app.controller('attendingCtrl',function($scope,$http){
 
 })
 
-app.controller('ctrlSchedule',function($scope,$http){
-    var edata = $http.get('data/schedule.json');
+app.controller('ctrlSchedule',function($scope,$http,$routeParams){
 
-    fetch('data/schedule.json')
-    .then(res=>res.json())
-    .then(data => {
-        $scope.schData = data;
-})
+    $scope.sessionDetail = null;
 
-$scope.schData = edata;
+    if ($routeParams['session']) {
+        console.log('sess', $routeParams['session'])
+        $http.get('data/sessions.json').success(function (sessionData) {
+            var result = sessionData.filter(session => session.title === $routeParams['session']);
+            $scope.sessionDetail = result[0] || null;
+        })
+    }
+
+    $http.get('data/schedule.json').success(function(schData) {
+        $scope.schData = schData;
+    });
+
+
 })
 
 app.controller('footerCtrl',function($scope){
