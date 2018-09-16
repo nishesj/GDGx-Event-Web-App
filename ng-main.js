@@ -339,3 +339,9 @@ app.controller('footerCtrl',function($scope){
         $scope.footerData = data;
     })
 })
+
+app.controller('navCtrl', function($scope, $location) {
+    $scope.isActive = function(path) {
+        return path === $location.path();
+    }
+})

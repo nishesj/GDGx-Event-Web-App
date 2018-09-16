@@ -72,3 +72,7 @@
         transform: scale(1);
     }
 }
+
+nav.navbar-light .navbar-brand.active {
+    color: #1a73e8;
+}

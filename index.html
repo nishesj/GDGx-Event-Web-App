@@ -90,29 +90,29 @@
         </div>
     </nav>
 
-    <nav class="navbar navbar-light white pt-1 pb-1 z-depth-3 fixed-bottom d-block d-md-block d-sm-block d-lg-none text-center">
+    <nav class="navbar navbar-light white pt-1 pb-1 z-depth-3 fixed-bottom d-block d-md-block d-sm-block d-lg-none text-center" ng-controller="navCtrl">
        <div class="container-fluid">
            <div class="row text-center p-0" style="width: 120%;">
                <div class="col-md-3 col-sm-3 col-3 text-center p-0">
-                    <a class="navbar-brand text-center pb-0 pt-0 pl-3 pr-3 waves-effect" href="#/">
+                    <a class="navbar-brand text-center pb-0 pt-0 pl-3 pr-3 waves-effect" ng-class="{ active: isActive('/')}" href="#/">
                         <i class="fa fa-home mb-0" aria-hidden="true"></i>
                         <p style="font-size: 40%" class="mb-0 mt-0">Home</p>
                     </a>
                </div>
                <div class="col-md-3 col-sm-3 col-3 p-0 text-center p-0">
-                    <a class="navbar-brand text-center pb-0 pt-0 pl-3 pr-3 waves-effect" href="/registration">
+                    <a class="navbar-brand text-center pb-0 pt-0 pl-3 pr-3 waves-effect" href="/registration" ng-class="{ active: isActive('/registration')}">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
                         <p style="font-size: 40%" class="mb-0 mt-0">Registration</p>
                     </a>
                </div>
                <div class="col-md-3 col-sm-3 col-3 p-0 text-center">
-                    <a class="navbar-brand text-center pb-0 pt-0 pl-3 pr-3 waves-effect" href="#speakers">
+                    <a class="navbar-brand text-center pb-0 pt-0 pl-3 pr-3 waves-effect" href="/speakers" ng-class="{ active: isActive('/speakers')}">
                         <i class="fa fa-users mb-0" aria-hidden="true"></i>
                         <p style="font-size: 40%" class="mb-0 mt-0">Speakers</p>
                     </a>
                </div>
                <div class="col-md-3 col-sm-3 col-3 p-0 text-center">
-                    <a class="navbar-brand text-center pb-0 pt-0 pl-3 pr-3 waves-effect" href="#sessions">
+                    <a class="navbar-brand text-center pb-0 pt-0 pl-3 pr-3 waves-effect" href="/sessions" ng-class="{ active: isActive('/sessions')}">
                         <i class="fa fa-paper-plane-o mb-0" aria-hidden="true"></i>
                         <p style="font-size: 40%" class="mb-0 mt-0">Sessions</p>
                     </a>
